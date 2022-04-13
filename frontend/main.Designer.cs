@@ -1,6 +1,6 @@
 ﻿namespace frontend
 {
-    partial class Form1
+    partial class main
     {
         /// <summary>
         ///  Required designer variable.
@@ -80,7 +80,6 @@
             this.postCode1Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.postCode1Input.TrailingIcon = null;
             this.postCode1Input.UseSystemPasswordChar = false;
-            this.postCode1Input.Click += new System.EventHandler(this.postCode1Input_Click);
             // 
             // postCode2Input
             // 
@@ -111,7 +110,6 @@
             this.postCode2Input.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.postCode2Input.TrailingIcon = null;
             this.postCode2Input.UseSystemPasswordChar = false;
-            this.postCode2Input.Click += new System.EventHandler(this.postCode2Input_Click);
             // 
             // submitButton
             // 
@@ -146,7 +144,6 @@
             this.materialLabel1.Size = new System.Drawing.Size(70, 29);
             this.materialLabel1.TabIndex = 11;
             this.materialLabel1.Text = "Origin:";
-            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
             // materialLabel2
             // 

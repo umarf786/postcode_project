@@ -1,20 +1,23 @@
 using backend;
+using helpers;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Collections;
+
 namespace frontend
 {
-    public partial class Form1 : MaterialForm
+    public partial class main : MaterialForm
     {
-
-        String pc1 = "s";
+        /// <summary>
+        /// Initialisation of global variables
+        /// </summary>
+        String pc1 = "";
         String pc2 = "";
         double miles = 0;
         double km = 0;
         ArrayList data;
-        Boolean isChecked = false;
         Boolean hasData = false;
-        public Form1()
+        public main()
         {
             InitializeComponent();
 
@@ -25,46 +28,40 @@ namespace frontend
             
         }   
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void postCode1Input_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void postCode2Input_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// This is ran when the enter key is pressed or when the submit button is pressed
+        /// Shows all of the information from the ArrayList from the backend
+        /// </summary>
         private void submitButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Frontend Running");
             pc1 = postCode1Input.Text;
             pc2 = postCode2Input.Text;
-            data = Program1.grabInfo(pc1, pc2);
-            if(data[4] is string)
+            data = backend.main.grabInfo(pc1, pc2);
+            try
             {
-                materialLabel4.Text = "Distance: " + data[0] + " miles";
-                materialLabel1.Text = "Origin: " + data[2];
-                materialLabel2.Text = "Dest: " + data[3];
-                materialLabel3.Text = "Driving Time: " + data[4];
-                materialProgressBar1.Value = 1;
-                materialProgressBar1.Maximum = 5;
-                materialProgressBar1.Value = 5;
-                hasData = true;
+                if (data[4] is string)
+                {
+                    materialLabel4.Text = "Distance: " + data[0] + " miles";
+                    materialLabel1.Text = "Origin: " + data[2];
+                    materialLabel2.Text = "Dest: " + data[3];
+                    materialLabel3.Text = "Driving Time: " + data[4];
+                    materialProgressBar1.Value = 1;
+                    materialProgressBar1.Maximum = 5;
+                    materialProgressBar1.Value = 5;
+                    hasData = true;
+                }
+            } catch (Exception ex)
+            {
+                backend.main.logger.Fatal("No data has been retrieved from the API");
+                hasData = false;
             }
+            
             
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// This method toggles the distance measure of KM and Miles
+        /// </summary>
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
         {
             if (hasData) {
