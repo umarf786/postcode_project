@@ -4,6 +4,7 @@ Written in **C#** using **Visual Studio**.
 The main goal of this project is as follows - Enter two postcodes and find the distance between them.
 I wanted to go further than this and use the resources I had available to create something better.
 
+![Image of software](https://i.snipboard.io/CdV7fK.jpg)
 Features of this software:
 
  - UK Postcode validation using regex
