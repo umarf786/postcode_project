@@ -3,6 +3,8 @@
 Written in **C#** using **Visual Studio**.
 The main goal of this project is as follows - Enter two postcodes and find the distance between them.
 I wanted to go further than this and use the resources I had available to create something better.
+The code is seperated into frontend and backend. In the frontend folder, everything relating to the display is included.
+In the backend folder, you have helpers (googleAPI functions and validation functions) along with the main backend code which calls these functions when required.
 Watch this YouTube video to see the functionality: https://www.youtube.com/watch?v=NfVasgFEEkE
 
 ![Image of software](https://i.snipboard.io/CdV7fK.jpg)
