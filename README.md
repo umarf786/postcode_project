@@ -1,3 +1,4 @@
+
 # Welcome to my Postcode Project
 
 Written in **C#** using **Visual Studio**.
@@ -16,6 +17,15 @@ Features of this software:
  - Origin and destination information is shown
  - Toggle button to switch between miles and km
  - Logging feature which logs to external file in same directory
+ - Unit testing using MSTest framework
+
+
+## Test Cases for Unit Tests
+**checkAPIWithValidPostcodes**: This test should pass if the API call is not successful at recieving a response with valid 	postcodes. The API status should returns "OK"
+**checkAPIWithInvalidPostcodes**: This test should pass if the API call is not successful at recieving a response with valid 	postcodes. The API status should returns "NOT_FOUND"
+**checkIfPostcodesAreValid**: This test should pass if the postcodes are valid and recieves a true boolean value from the helper function
+**checkIfPostcodesAreInvalid**: This test should pass if the postcodes are invalid and recieves a false boolean value from the helper function
+**checkIfDataIsParsed**: This test should pass if the data is parsed correctly and the origin value contains the original origin postcode
 
 ## How to use this software?
 
