@@ -11,7 +11,7 @@ namespace helpers
     /// <summary>
     /// This is the googleAPI class where all methods related to the Google API are stored
     /// </summary>
-    internal class googleAPI
+    public class googleAPI
     {
         /// <summary>
         /// This method grabData takes postcodes as parameters
@@ -99,7 +99,7 @@ namespace helpers
     /// <summary>
     /// This class contains all the methods related to validation of postcodes
     /// </summary>
-    internal class validation
+    public class validation
     {
         /// <summary>
         /// This method uses regex to check if the postcodes entered are valid postcodes based on the regex which is for UK format
